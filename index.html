@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Millsaps Campus Life Super App</title>
+
+    <!-- this line loads bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- this line loads my custom styles from styles.css -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+
+    <!-- top nav bar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+
+        <!-- logo and app name -->
+        <a class="navbar-brand" href="index.html">🎓 Campus Life</a>
+
+        <!-- menu symbol that works on phones -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- home, dining, clubs, events links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dining.html">Dining</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clubs.html">Clubs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- middle of the page users will see -->
+    <main class="container my-5">
+
+      <!-- big title and subtitle -->
+      <div class="text-center mb-5">
+        <h1>Welcome to Campus Life!</h1>
+        <p class="lead">Your one-stop app for dining, clubs, and campus events.</p>
+      </div>
+
+      <!-- 3 clickable boxes for each feature -->
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h2 class="card-title">🍽️ Dining</h2>
+              <p class="card-text">Check dining hall locations, hours, and menus.</p>
+              <a href="dining.html" class="btn btn-primary">Go to Dining</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h2 class="card-title">🎯 Clubs</h2>
+              <p class="card-text">Explore student clubs and find your community.</p>
+              <a href="clubs.html" class="btn btn-primary">Go to Clubs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h2 class="card-title">📅 Events</h2>
+              <p class="card-text">Stay up to date on campus events happening near you.</p>
+              <a href="events.html" class="btn btn-primary">Go to Events</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="text-center py-3 bg-dark text-white mt-5">
+      <p class="mb-0">&copy; 2026 Campus Life Super App</p>
+    </footer>
+
+    <!-- makes the phone menu work -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- connects the javascript file main.js -->
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
