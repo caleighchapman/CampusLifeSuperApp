@@ -54,7 +54,7 @@ h1 {
   background-color: #0004ff;
   border-left: 4px solid #ee3ceb;
   font-size: 1.1rem;
-  color: #ffffff;
+  color: #0c0000;
 }
 
 /* adds a purple top border to the footer */
@@ -62,16 +62,55 @@ footer {
   border-top: 3px solid #9b51e0;
 }
 
-/* Responsive styles for phones and tablets */
+/* responsive styles for phones and tablets */
 @media (max-width: 768px) {
 
-  /* Makes the page title smaller on phones */
+  /* makes the page title smaller on phones */
   h1 {
     font-size: 1.8rem;
   }
 
-  /* Stacks cards with spacing on phones */
+  /* stacks cards with spacing on phones */
   .card {
     margin-bottom: 1rem;
   }
+}
+
+/* hero banner on the home page */
+#hero {
+    background: radial-gradient(circle, #9b51e0 0%, #4d0c8a 100%);
+  color: white;
+  padding: 70px 30px
+}
+
+/* makes the lead text under the hero title white too */
+#hero .lead {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* dining page accent - red */
+body.dining-page .navbar {
+  border-bottom: 3px solid #ff0000;
+}
+
+body.dining-page footer {
+  border-top: 3px solid #ff0000;
+}
+
+/* clubs page accent - green */
+body.clubs-page .navbar {
+  border-bottom: 3px solid #00b42a;
+}
+
+body.clubs-page footer {
+  border-top: 3px solid #00b42a;
+}
+
+/* events page accent - orange */
+body.events-page .navbar {
+  border-bottom: 3px solid #fd7e14;
+}
+
+body.events-page footer {
+  border-top: 3px solid #fd7e14;
 }
