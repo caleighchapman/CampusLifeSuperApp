@@ -1,3 +1,31 @@
+// WEATHER API setup
+// this fetches real current weather for Jackson MS using OpenWeatherMap
+const apiKey = "02b6524ac2a21e66f95bc30d772c21e6";
+const city = "Jackson,MS,US";
+
+// this function calls the weather API and displays the result on the page
+function loadWeather() {
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
+    .then(response => response.json())
+    .then(data => {
+      // pull the info we want out of the API response
+      let temp = data.main.temp;
+      let description = data.weather[0].description;
+      let humidity = data.main.humidity;
+
+      // put the weather info into the widget on the page
+      document.getElementById("weather-display").innerHTML = 
+        `Jackson, MS: ${Math.round(temp)}°F — ${description} | Humidity: ${humidity}%`;
+    })
+    .catch(error => {
+      // if something goes wrong, show this message instead
+      document.getElementById("weather-display").innerHTML = "Weather unavailable right now.";
+    });
+}
+
+// run the weather function as soon as the page loads
+loadWeather();
+
 // DINING PAGE JAVASCRIPT
 // this function runs when a dining location button is clicked
 // it receives the name of the location that was clicked
@@ -104,5 +132,55 @@ function filterClubs(category) {
   });
 }
 
-// show all clubs automatically when the page first loads
-filterClubs("all");
+// only run filterClubs if the clubs container exists on this page
+if (document.getElementById("clubs-container")) {
+  filterClubs("all");
+}
+
+// EVENTS PAGE JAVASCRIPT
+// this function fetches real upcoming events from the Millsaps events calendar
+// it uses the Localist API which is free and doesn't need a key
+function loadEvents() {
+
+  // the API URL for Millsaps upcoming events
+  const eventsUrl = "https://calendar.millsaps.edu/api/2/events?days=30&pp=6";
+
+  fetch(eventsUrl)
+    .then(response => response.json())
+    .then(data => {
+
+      // hide the "Loading events..." message once data arrives
+      document.getElementById("loading").style.display = "none";
+
+      // grab the container where event cards will go
+      let container = document.getElementById("events-container");
+
+      // loop through each event and create a card for it
+      data.events.forEach(item => {
+        let event = item.event;
+        let title = event.title;
+        let date = new Date(event.event_instances[0].event_instance.start).toLocaleDateString();
+        let url = event.localist_url;
+
+        container.innerHTML += `
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">${title}</h5>
+                <p class="card-text"><strong>Date:</strong> ${date}</p>
+                <a href="${url}" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+              </div>
+            </div>
+          </div>`;
+      });
+    })
+    .catch(error => {
+      // if the API fails show this message instead
+      document.getElementById("loading").innerHTML = "Events unavailable right now. <a href='https://calendar.millsaps.edu' target='_blank'>View the full calendar here.</a>";
+    });
+}
+
+// only run loadEvents if the events container exists on this page
+if (document.getElementById("events-container")) {
+  loadEvents();
+}

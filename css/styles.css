@@ -1,0 +1,77 @@
+/* styles apply to every page */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e7e1ebbe;
+}
+
+/* purple bottom border to the navbar */
+.navbar {
+  border-bottom: 3px solid #9b51e0;
+}
+
+/* makes the logo text bold and slightly bigger */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* styles the main heading on each page */
+h1 {
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+/* styles the subtitle text under each heading */
+.lead {
+  color: #555;
+}
+
+/* adds a shadow and hover lift effect to every card */
+.card {
+  transition: transform 0.2s;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* makes all primary buttons rounded with a custom blue color */
+.btn-primary {
+  border-radius: 8px;
+  background-color: #2674f1;
+  border-color: #0015ff;
+}
+
+.btn-primary:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+}
+
+/* styles the weather widget on the home page */
+#weather-widget {
+  background-color: #0004ff;
+  border-left: 4px solid #ee3ceb;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* adds a purple top border to the footer */
+footer {
+  border-top: 3px solid #9b51e0;
+}
+
+/* Responsive styles for phones and tablets */
+@media (max-width: 768px) {
+
+  /* Makes the page title smaller on phones */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Stacks cards with spacing on phones */
+  .card {
+    margin-bottom: 1rem;
+  }
+}
