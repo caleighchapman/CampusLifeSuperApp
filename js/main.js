@@ -125,7 +125,7 @@ function filterClubs(category) {
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">${club.name}</h5>
-            <span class="badge bg-primary">${club.category}</span>
+            <span class="badge" data-category="${club.category}">${club.category}</span>
           </div>
         </div>
       </div>`;
