@@ -38,15 +38,19 @@ h1 {
 }
 
 /* makes all primary buttons rounded with a custom blue color */
+
+/* Millsaps purple and white button colors */
 .btn-primary {
   border-radius: 8px;
-  background-color: #2674f1;
-  border-color: #0015ff;
+  background-color: #4a0080;
+  border-color: #4a0080;
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: #357abd;
-  border-color: #357abd;
+  background-color: #ffffff;
+  border-color: #4a0080;
+  color: #4a0080;
 }
 
 /* styles the weather widget on the home page */
@@ -88,34 +92,7 @@ footer {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* dining page accent - red */
-body.dining-page .navbar {
-  border-bottom: 3px solid #ff0000;
-}
-
-body.dining-page footer {
-  border-top: 3px solid #ff0000;
-}
-
-/* clubs page accent - green */
-body.clubs-page .navbar {
-  border-bottom: 3px solid #00b42a;
-}
-
-body.clubs-page footer {
-  border-top: 3px solid #00b42a;
-}
-
-/* events page accent - orange */
-body.events-page .navbar {
-  border-bottom: 3px solid #fd7e14;
-}
-
-body.events-page footer {
-  border-top: 3px solid #fd7e14;
-}
-
-/* Different color badges for each club category */
+/* different color badges for each club category */
 .badge.bg-primary {
   background-color: #6c757d !important;
 }
@@ -139,4 +116,18 @@ body.events-page footer {
 
 .badge[data-category="special"] {
   background-color: #9b51e0 !important;
+}
+
+/* Millsaps purple for outline buttons (used on clubs page) */
+.btn-outline-primary {
+  border-radius: 8px;
+  background-color: #4a0080;
+  border-color: #4a0080;
+  color: white;
+}
+
+.btn-outline-primary:hover{
+  background-color: #ffffff;
+  border-color: #4a0080;
+  color: #4a0080;
 }
