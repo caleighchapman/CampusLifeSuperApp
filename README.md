@@ -16,7 +16,7 @@ The app brings together dining information, student clubs, and campus events in 
 1. Clone the repository: `git clone https://github.com/caleighchapman/CampusLifeSuperApp.git`
 2. Open the project folder in VS Code
 3. Open `index.html` with Live Server to run locally
-4. Deployed live at: [Millsaps Campus Life Super App] (https://caleighchapman.github.io/CampusLifeSuperApp/)
+4. Deployed live at: [Millsaps Campus Life Super App](https://caleighchapman.github.io/CampusLifeSuperApp/)
 
 ## Features
 - **Home** - Welcome dashboard with live weather for Jackson, MS
